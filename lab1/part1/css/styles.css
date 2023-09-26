@@ -26,3 +26,8 @@ body {
   p, li, dd, dt, address {
     line-height: 1.5;
   }
+  /* I took this from https://stackoverflow.com/questions/15252597/how-to-add-a-dotted-underline-beneath-html-text */
+  u {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+  }
