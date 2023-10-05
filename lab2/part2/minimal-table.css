@@ -36,10 +36,9 @@ caption {
 
 /* For the planets */
 .topborder {
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 0px;
+  border-color:black;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
 }
 
 .bottomborder {
