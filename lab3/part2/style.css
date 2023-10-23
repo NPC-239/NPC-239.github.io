@@ -3,3 +3,18 @@ html {
 }
 
 /* Your CSS below here */
+
+div {
+  width: 201px;
+  height: 100px;
+  margin: auto;
+  border: solid 1px rgb(42, 165, 165);
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  text-shadow: black;
+  color: magenta;
+  background-color: cyan;
+  align-items: center;
+  justify-content: center;
+}
