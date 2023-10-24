@@ -43,3 +43,76 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+html {
+  font-size: 10px;
+  font-family: "ZT Bros Oskon 90s Font";
+}
+
+/* font by Zelowtype */
+@font-face {
+  font-family: "ZT Bros Oskon 90s Font";
+  src: url(./ZTBros/ZTBrosOskon90s-Regular.otf);
+}
+
+header {
+  text-align: center;  
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+section {
+  text-indent: 20px;
+}
+
+body {
+  line-height: 11px;
+}
+
+a {
+  text-decoration: underline;
+}
+a:visited {
+  color:brown;
+}
+
+a:focus {
+  color:orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color:darkslateblue;
+  text-decoration: none;
+}
+
+ul {
+  line-height: 13px;
+  list-style-type: square;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  background-color: rgb(164, 145, 145);
+}
+nav li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background: rgb(148, 164, 124);
+  color: whitesmoke;
+}
