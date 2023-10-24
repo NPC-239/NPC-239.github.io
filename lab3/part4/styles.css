@@ -21,17 +21,31 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: grid;
+    /* okay that's my fault I didn't give myself enough time to fix this
+      I finally got them beside each other but the images are too dang fat. 
+      I also believed repeat would give it a 2x2 column + 1 image?? dang. */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
   }
   
   nav {
     background-color: #000;
     padding: .5em;
   }
+
+  nav li {
+    margin-right: 10px;
+  }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    /* this thing evenly distributes space */
+    justify-content: space-between;
+
   }
   
   nav a {
@@ -44,8 +58,37 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
   }
 
   .feature {
       width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 0;
+  }
+
+  article, aside {
+    margin: 10px;
+  }
+
+  aside {
+    /* I feel like playing around with flex is making me not understand it a bit more */
+    max-width: 25%;
+    flex-basis: 25%;
+    flex: 0px 0px 25%;
+  }
+
+  aside img {
+    width: 150px;
+  }
+
+  article {
+    max-width: 65%;
+  }
+
+  nav ul li {
+    margin: 5px 0;
   }
