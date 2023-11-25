@@ -25,7 +25,7 @@ const yItem = randomValueFromArray(insertY);
 const zItem = randomValueFromArray(insertZ);
 
 // Replace the placeholders with the matching items
-newStory = newStory.replace(':xItem:', xItem).replace(':yItem:', yItem).replace(':zItem:', zItem);
+newStory = newStory.replace(':xItem:', xItem).replace(':yItem:', yItem).replace(':zItem:', zItem).replace(':xItem:', xItem);
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -50,7 +50,8 @@ function result() {
     // Convert temperature from Fahrenheit to Celsius
     // Formula (32°F − 32) × 5/9 = 0°C
     const temperatureCelsius = Math.round((temperatureFahrenheit - 32) * 5 / 9);
-    const formattedTemperature = temperatureCelsius + ' centigrade';
+    // Changed after reading an article: https://expattutor.wordpress.com/2013/02/14/what-happened-to-centigrade-confusion-over-the-celsius-temperature-scale/#:~:text=In%20England%2C%20the%20BBC%20Weather,England%2C%20according%20to%20some%20sources.&text=The%20centigrade%20scale%20was%20known%20as%20such%20from%201743-1954.
+    const formattedTemperature = temperatureCelsius + ' celsius';
 
     // Convert the weight from pounds to stones
     // 1 pound = 0.0714286 stones
