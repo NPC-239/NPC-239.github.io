@@ -40,13 +40,22 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStory = newstory.replace('Bob', name);
+    newStory = newStory.replace('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const temperatureFahrenheit =  Math.round(94);
 
+    // Convert the weight from pounds to stones
+    // 1 pound = 0.0714286 stones
+    const weightInStones = Math.round(weight / 14); 
+    const formattedWeight = weightInStones + ' stone';
+
+    // Update the newStory string
+    // placeholder for now until next commit
+    newStory = newStory.replace('94 fahrenheit', temperatureFahrenheit + ' celsius');
+    newStory = newStory.replace('300 pounds', formattedWeight);
   }
 
   // Final story gets displayed
