@@ -47,14 +47,18 @@ function result() {
     const weight = Math.round(300);
     const temperatureFahrenheit =  Math.round(94);
 
+    // Convert temperature from Fahrenheit to Celsius
+    // Formula (32°F − 32) × 5/9 = 0°C
+    const temperatureCelsius = Math.round((temperatureFahrenheit - 32) * 5 / 9);
+    const formattedTemperature = temperatureCelsius + ' centigrade';
+
     // Convert the weight from pounds to stones
     // 1 pound = 0.0714286 stones
     const weightInStones = Math.round(weight / 14); 
     const formattedWeight = weightInStones + ' stone';
 
     // Update the newStory string
-    // placeholder for now until next commit
-    newStory = newStory.replace('94 fahrenheit', temperatureFahrenheit + ' celsius');
+    newStory = newStory.replace('94 fahrenheit', formattedTemperature);
     newStory = newStory.replace('300 pounds', formattedWeight);
   }
 
