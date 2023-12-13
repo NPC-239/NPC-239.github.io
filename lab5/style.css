@@ -1,0 +1,64 @@
+html, body {
+        margin: 0;
+        padding: 0;
+}
+
+body { 
+        font: 76% arial,sans-serif;
+        text-align: center;
+}
+
+p {
+    margin: 0 10px 10px;
+}
+
+a { 
+    padding: 5px; 
+    text-decoration: none; 
+    color:#000000; 
+}
+
+header {
+    background-color:#F3F2ED;
+}
+
+header h1 {
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+section {
+    text-align: left;
+}
+
+section p {
+    line-height: 1.4;
+}
+
+nav {
+    background:#F6F0E0;
+    float: left;
+    width: 200px;
+}
+nav ul {
+    margin: 15px 0; 
+    padding: 0; 
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom:5px;
+}
+
+footer { 
+    background:#BFBD93; 
+    clear: both;
+    width: 100%;
+}
+
+footer p {margin:0;
+    padding: 5px 10px;
+}
+
