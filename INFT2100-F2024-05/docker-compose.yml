@@ -1,0 +1,57 @@
+# -------------------------------------------
+# docker-compose -f docker-compose.yml up -d
+# this command will first check to see if the images exist, if they do they will NOT be rebuilt
+# the build: command in the docker-compose.yml file will be ignored
+#
+# docker-compose -p inft2100-06 -f docker-compose.yml up -d
+#
+# docker-compose -f docker-compose.yml up -d --build
+# if you want to force a rebuild of the images, even if they exist, then use the --build option
+# -------------------------------------------
+version: '3.8'
+
+services:
+  web-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: inft2100-web-app-05
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+    environment:
+      - XDEBUG_CONFIG=client_host=host.docker.internal
+      - PHP_IDE_CONFIG=DockerServer
+    depends_on:
+      - postgres-php
+
+  postgres-php:
+    image: postgres:15
+    restart: unless-stopped
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=inft2100_jobs
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    container_name: inft2100-postgres-05
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@domain.ca
+      - PGADMIN_DEFAULT_PASSWORD=password
+    container_name: inft2100-pgadmin-05
+    depends_on:
+      - postgres-php
+
+# The volume is now explicitly mapped to a directory within your project
+volumes:
+  postgres-data:
