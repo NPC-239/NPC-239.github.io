@@ -14,7 +14,7 @@ services:
   web-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     ports:
       - "8080:80"
     container_name: inft2100-web-app-05

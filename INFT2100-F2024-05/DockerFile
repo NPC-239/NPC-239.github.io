@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ./composer.json ./
 
 # Explicitly require fakerphp/faker and phpmailer/phpmailer if not already in composer.json
-RUN composer require fakerphp/faker phpmailer/phpmailer --no-update
+# RUN composer require fakerphp/faker phpmailer/phpmailer --no-update
 
 # Install required PHP extensions first, including Xdebug
 FROM php:8.2-apache
@@ -46,7 +46,7 @@ RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Install Composer dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+#RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Expose the port Apache will run on
 EXPOSE 80

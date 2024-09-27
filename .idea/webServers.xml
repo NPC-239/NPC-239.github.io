@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="44358acd-7ae1-4f4a-af47-dbb26edebfe7" name="DockerServer" url="http://localhost:8080">
+        <fileTransfer mountedRoot="C:\Durham College - School\NPC-239.github.io" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
