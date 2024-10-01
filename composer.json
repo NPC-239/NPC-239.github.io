@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/NPC-239.github.io",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "mateo",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
