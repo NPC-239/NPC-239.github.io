@@ -47,6 +47,21 @@ RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache \
 
 # Install Composer dependencies
 #RUN composer install --no-dev --optimize-autoloader --no-interaction
+#----------------------------------------------------------
+# Lesson 2.2.2
+# Copy custom Apache virtual host configuration
+COPY ./config/apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 
+# Enable mod_rewrite for Laravel
+RUN a2enmod rewrite
+
+# Restart Apache to apply the changes
+RUN service apache2 restart
+#----------------------------------------------------------
+
+# Ensure required directories exist and set permissions
+RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 # Expose the port Apache will run on
 EXPOSE 80

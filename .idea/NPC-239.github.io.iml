@@ -2,6 +2,12 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/example/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/example/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/example/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/example/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/example/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/example/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/INFT2100-F2024-05/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
