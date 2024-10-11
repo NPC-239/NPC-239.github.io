@@ -1,9 +1,9 @@
 <x-layout>
 
     <x-slot:heading>
-        About Page
+        Jobs Page
     </x-slot:heading>
 
-    <h1>About Page</h1>
+    <h1>Jobs Page</h1>
 
 </x-layout>

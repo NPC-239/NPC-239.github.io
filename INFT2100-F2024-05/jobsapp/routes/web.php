@@ -7,7 +7,26 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('jobs');
+    return view('jobs', [
+
+            'jobs' =>
+            [
+                'id' => 1,
+                'title' => 'Intermediate Developer',
+                'salary' => '$70,000'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Junior Developer',
+                'salary' => '$50,000'
+            ],
+            [
+                'id' => 3,
+                'title' => 'Senior Developer',
+                'salary' => '$100,000'
+            ]
+        ]
+    );
 });
 
 Route::get('/', function () {
