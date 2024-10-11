@@ -5,7 +5,7 @@
       <paths name="DockerServer">
         <serverdata>
           <mappings>
-            <mapping deploy="\var\www\html" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="\var\www\html" local="$PROJECT_DIR$/INFT2100-F2024-05" web="/" />
           </mappings>
         </serverdata>
       </paths>
