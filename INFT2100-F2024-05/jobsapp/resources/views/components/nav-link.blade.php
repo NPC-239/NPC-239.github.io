@@ -1,5 +1,5 @@
 <!-- the attribute inside the array is utilizing the key 'active' -->
-@props(['active' => false, 'type'])
+@props(['active' => false, 'type' => 'a'])
 
 @if( $type == 'a')
     <a class="{{ $active ? 'bg-gray-900 text-white'
