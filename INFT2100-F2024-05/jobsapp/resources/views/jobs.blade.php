@@ -4,8 +4,6 @@
         Jobs Page
     </x-slot:heading>
 
-    <h1>Jobs Page</h1>
-
     <ul>
         @foreach($jobs as $job)
             <li>
